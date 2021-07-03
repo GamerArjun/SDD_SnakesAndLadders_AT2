@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+
 
 namespace AT2
 {
     public partial class Form6 : Form
     {
+        OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = 'C:\\Users\\parth.bhatia\\OneDrive - Arden Anglican School\\VisualStudioProjects\\AT2.Final\\AT2Database.accdb'");
+
         public Form6()
         {
             InitializeComponent();
@@ -19,6 +23,61 @@ namespace AT2
 
         private void Form6_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (OleDbConnection cnn = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = 'C:\\Users\\parth.bhatia\\OneDrive - Arden Anglican School\\VisualStudioProjects\\AT2.Final\\AT2Database.accdb'"))
+            {
+                string query = "SELECT * FROM user_master";
+                using (OleDbCommand cmd = new OleDbCommand(query, cnn))
+                {
+                    cnn.Open();
+                    using (OleDbDataReader reader = cmd.ExecuteReader())
+                    {
+                        int userIDOrdinal = reader.GetOrdinal("id");
+                        int usernameOrdinal = reader.GetOrdinal("username");
+                      
+                        while (reader.Read())
+                        {
+                            int userid = reader.GetInt32(userIDOrdinal);
+                            string name = reader.GetString(usernameOrdinal);
+                            dataGridView1.ColumnCount = 2;
+                            dataGridView1.Columns[0].Name = "User Id";
+                            dataGridView1.Columns[1].Name = "UserName";
+                            string[] row = new string[] { ""+userid, name};
+                            dataGridView1.Rows.Add(row);
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                // statements causing exception
+                OleDbCommand cmd = con.CreateCommand();
+                con.Open();
+                int userselected = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                cmd.CommandText = "Insert into selected_user(ID)Values("+userselected+")";
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Friend Added", "Congrats");
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show("Friend Already Added", "Error");
+                // error handling code
+            }
+            finally
+            {
+                con.Close();
+            }
 
         }
     }
