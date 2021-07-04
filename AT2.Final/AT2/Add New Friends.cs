@@ -28,9 +28,21 @@ namespace AT2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
+            //read value from the text box
+            string searchstring = textBox1.Text;
             using (OleDbConnection cnn = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = 'C:\\Users\\parth.bhatia\\OneDrive - Arden Anglican School\\VisualStudioProjects\\AT2.Final\\AT2Database.accdb'"))
             {
-                string query = "SELECT * FROM user_master";
+                string query;
+                //check if the search string is empty or not
+                if (searchstring.Trim() == "")
+                {
+                    query = "SELECT * FROM user_master";
+                }
+                else
+                {
+                    query = "SELECT * FROM user_master where username like '%" + searchstring + "%'";
+                }
                 using (OleDbCommand cmd = new OleDbCommand(query, cnn))
                 {
                     cnn.Open();
@@ -80,5 +92,7 @@ namespace AT2
             }
 
         }
+
+
     }
 }
