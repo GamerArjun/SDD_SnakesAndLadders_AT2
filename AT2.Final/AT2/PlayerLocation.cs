@@ -10,364 +10,322 @@ namespace AT2
 {
     class PlayerLocation
     {
-        public static void Player1Location(int Player1location, PictureBox Player1)
+        public static void Player1Location(int playerLocation, PictureBox playerIcon)
         {
-
-            switch (Player1location)
+            int y1 = 619;
+            int x1 = 18;
+            int x_increment = 70;
+            int y_increment = -67;
+            switch (playerLocation)
             {
-                case 0:
-                    Player1.Location = new Point(36, 510);
-                    break;
                 case 1:
-                    Player1.Location = new Point(129, 510);
+                    playerIcon.Location = new Point(x1, y1);
                     break;
                 case 2:
-                    Player1.Location = new Point(216, 510);
+                    playerIcon.Location = new Point(x1 + x_increment, y1);
                     break;
                 case 3:
-                    Player1.Location = new Point(306, 510);
+                    playerIcon.Location = new Point(x1 + 2*x_increment, y1);
                     break;
                 case 4:
-                    Player1.Location = new Point(394, 510);
+                    playerIcon.Location = new Point(x1 + 3 * x_increment, y1);
                     break;
                 case 5:
-                    Player1.Location = new Point(483, 510);
+                    playerIcon.Location = new Point(x1 + 4 * x_increment, y1);
                     break;
                 case 6:
-                    Player1.Location = new Point(572, 510);
+                    playerIcon.Location = new Point(x1 + 5 * x_increment, y1);
                     break;
                 case 7:
-                    Player1.Location = new Point(663, 510);
+                    playerIcon.Location = new Point(x1 + 6 * x_increment, y1);
                     break;
                 case 8:
-                    Player1.Location = new Point(663, 432);
+                    playerIcon.Location = new Point(x1 + 7 * x_increment, y1);
                     break;
                 case 9:
-                    Player1.Location = new Point(572, 432);
+                    playerIcon.Location = new Point(x1 + 8 * x_increment, y1);
                     break;
                 case 10:
-                    Player1.Location = new Point(483, 432);
+                    playerIcon.Location = new Point(x1 + 9 * x_increment, y1);
                     break;
                 case 11:
-                    Player1.Location = new Point(394, 432);
+                    playerIcon.Location = new Point(x1 + 9 * x_increment, y1 + y_increment);
                     break;
                 case 12:
-                    Player1.Location = new Point(306, 432);
+                    playerIcon.Location = new Point(x1 + 8 * x_increment, y1 + y_increment);
                     break;
                 case 13:
-                    Player1.Location = new Point(216, 432);
+                    playerIcon.Location = new Point(x1 + 7 * x_increment, y1 + y_increment);
                     break;
                 case 14:
-                    Player1.Location = new Point(129, 432);
+                    playerIcon.Location = new Point(x1 + 6 * x_increment, y1 + y_increment);
                     break;
                 case 15:
-                    Player1.Location = new Point(36, 432);
+                    playerIcon.Location = new Point(x1 + 5 * x_increment, y1 + y_increment);
                     break;
                 case 16:
-                    Player1.Location = new Point(36, 353);
+                    playerIcon.Location = new Point(x1 + 4 * x_increment, y1 + y_increment);
                     break;
                 case 17:
-                    Player1.Location = new Point(129, 353);
+                    playerIcon.Location = new Point(x1 + 3 * x_increment, y1 + y_increment);
                     break;
                 case 18:
-                    Player1.Location = new Point(216, 353);
+                    playerIcon.Location = new Point(x1 + 2 * x_increment, y1 + y_increment);
                     break;
                 case 19:
-                    Player1.Location = new Point(306, 353);
+                    playerIcon.Location = new Point(x1 + 1 * x_increment, y1 + y_increment);
                     break;
                 case 20:
-                    Player1.Location = new Point(394, 353);
+                    playerIcon.Location = new Point(x1 + x_increment, y1 + y_increment);
 
                     break;
                 case 21:
-                    Player1.Location = new Point(483, 353);
+                    playerIcon.Location = new Point(x1, y1 +2 * y_increment);
                     break;
                 case 22:
-                    Player1.Location = new Point(572, 353);
+                    playerIcon.Location = new Point(x1 + x_increment, y1 + 2 * y_increment);
                     break;
                 case 23:
-                    Player1.Location = new Point(663, 353);
+                    playerIcon.Location = new Point(x1 + 2 * x_increment, y1 + 2 * y_increment);
                     break;
                 case 24:
-                    Player1.Location = new Point(663, 272);
+                    playerIcon.Location = new Point(x1 + 3 * x_increment, y1 + 2 * y_increment);
                     break;
                 case 25:
-                    Player1.Location = new Point(572, 272);
+                    playerIcon.Location = new Point(x1 + 4 * x_increment, y1 + 2 * y_increment);
                     break;
                 case 26:
-                    Player1.Location = new Point(483, 272);
+                    playerIcon.Location = new Point(x1 + 5 * x_increment, y1 + 2 * y_increment);
                     break;
                 case 27:
-                    Player1.Location = new Point(394, 272);
+                    playerIcon.Location = new Point(x1 + 6 * x_increment, y1 + 2 * y_increment);
                     break;
                 case 28:
-                    Player1.Location = new Point(306, 272);
+                    playerIcon.Location = new Point(x1 + 7 * x_increment, y1 + 2 * y_increment);
                     break;
                 case 29:
-                    Player1.Location = new Point(216, 272);
+                    playerIcon.Location = new Point(x1 + 8 * x_increment, y1 + 2 * y_increment);
                     break;
                 case 30:
-                    Player1.Location = new Point(129, 272);
+                    playerIcon.Location = new Point(x1 + 9 * x_increment, y1 + 2 * y_increment);
                     break;
                 case 31:
-                    Player1.Location = new Point(36, 272);
+                    playerIcon.Location = new Point(x1 + 9 * x_increment, y1 + 3 * y_increment);
                     break;
                 case 32:
-                    Player1.Location = new Point(36, 193);
+                    playerIcon.Location = new Point(x1 + 8 * x_increment, y1 + 3 * y_increment);
                     break;
                 case 33:
-                    Player1.Location = new Point(129, 193);
+                    playerIcon.Location = new Point(x1 + 7 * x_increment, y1 + 3 * y_increment);
                     break;
                 case 34:
-                    Player1.Location = new Point(216, 193);
+                    playerIcon.Location = new Point(x1 + 6 * x_increment, y1 + 3 * y_increment);
                     break;
                 case 35:
-                    Player1.Location = new Point(306, 193);
+                    playerIcon.Location = new Point(x1 + 5 * x_increment, y1 + 3 * y_increment);
                     break;
                 case 36:
-                    Player1.Location = new Point(394, 193);
+                    playerIcon.Location = new Point(x1 + 4 * x_increment, y1 + 3 * y_increment);
                     break;
                 case 37:
-                    Player1.Location = new Point(483, 193);
+                    playerIcon.Location = new Point(x1 + 3 * x_increment, y1 + 3 * y_increment);
                     break;
                 case 38:
-                    Player1.Location = new Point(572, 193);
+                    playerIcon.Location = new Point(x1 + 2 * x_increment, y1 + 3 * y_increment);
                     break;
                 case 39:
-                    Player1.Location = new Point(663, 193);
+                    playerIcon.Location = new Point(x1 + x_increment, y1 + 3 * y_increment);
                     break;
                 case 40:
-                    Player1.Location = new Point(663, 113);
+                    playerIcon.Location = new Point(x1, y1 + 3 * y_increment);
                     break;
                 case 41:
-                    Player1.Location = new Point(572, 113);
+                    playerIcon.Location = new Point(x1, y1 + 4 * y_increment);
                     break;
                 case 42:
-                    Player1.Location = new Point(483, 113);
+                    playerIcon.Location = new Point(x1 + x_increment, y1 + 4 * y_increment);
                     break;
                 case 43:
-                    Player1.Location = new Point(394, 113);
+                    playerIcon.Location = new Point(x1 + 2 * x_increment, y1 + 4 * y_increment);
                     break;
                 case 44:
-                    Player1.Location = new Point(306, 113);
+                    playerIcon.Location = new Point(x1 + 3 * x_increment, y1 + 4 * y_increment);
                     break;
                 case 45:
-                    Player1.Location = new Point(216, 113);
+                    playerIcon.Location = new Point(x1 + 4 * x_increment, y1 + 4 * y_increment);
                     break;
                 case 46:
-                    Player1.Location = new Point(129, 113);
+                    playerIcon.Location = new Point(x1 + 5 * x_increment, y1 + 4 * y_increment);
                     break;
                 case 47:
-                    Player1.Location = new Point(36, 113);
+                    playerIcon.Location = new Point(x1 + 6 * x_increment, y1 + 4 * y_increment);
                     break;
                 case 48:
-                    Player1.Location = new Point(36, 33);
+                    playerIcon.Location = new Point(x1 +7 * x_increment, y1 + 4 * y_increment);
                     break;
                 case 49:
-                    Player1.Location = new Point(129, 33);
+                    playerIcon.Location = new Point(x1 + 8 * x_increment, y1 + 4 * y_increment);
                     break;
                 case 50:
-                    Player1.Location = new Point(216, 33);
+                    playerIcon.Location = new Point(x1 + 9 * x_increment, y1 + 4 * y_increment);
                     break;
                 case 51:
-                    Player1.Location = new Point(306, 33);
+                    playerIcon.Location = new Point(x1 + 9 * x_increment, y1 + 5 * y_increment);
                     break;
                 case 52:
-                    Player1.Location = new Point(394, 33);
+                    playerIcon.Location = new Point(x1 + 8 * x_increment, y1 + 5 * y_increment);
                     break;
                 case 53:
-                    Player1.Location = new Point(483, 33);
+                    playerIcon.Location = new Point(x1 + 7 * x_increment, y1 + 5 * y_increment);
                     break;
                 case 54:
-                    Player1.Location = new Point(572, 33);
+                    playerIcon.Location = new Point(x1 + 6 * x_increment, y1 + 5 * y_increment);
                     break;
                 case 55:
-                    Player1.Location = new Point(663, 33);
+                    playerIcon.Location = new Point(x1 + 5 * x_increment, y1 + 5 * y_increment);
+                    break;
+                case 56:
+
+                    break;
+                case 57:
+
+                    break;
+                case 58:
+
+                    break;
+                case 59:
+
+                    break;
+                case 60:
+
+                    break;
+                case 61:
+
+                    break;
+                case 62:
+
+                    break;
+                case 63:
+
+                    break;
+                case 64:
+
+                    break;
+                case 65:
+
+                    break;
+                case 66:
+
+                    break;
+                case 67:
+
+                    break;
+                case 68:
+
+                    break;
+                case 69:
+
+                    break;
+                case 70:
+
+                    break;
+                case 71:
+
+                    break;
+                case 72:
+
+                    break;
+                case 73:
+
+                    break;
+                case 74:
+
+                    break;
+                case 75:
+
+                    break;
+                case 76:
+
+                    break;
+                case 77:
+
+                    break;
+                case 78:
+
+                    break;
+                case 79:
+
+                    break;
+                case 80:
+
+                    break;
+                case 81:
+
+                    break;
+                case 82:
+
+                    break;
+                case 83:
+
+                    break;
+                case 84:
+
+                    break;
+                case 85:
+
+                    break;
+                case 86:
+
+                    break;
+                case 87:
+
+                    break;
+                case 88:
+
+                    break;
+                case 89:
+
+                    break;
+                case 90:
+
+                    break;
+                case 91:
+
+                    break;
+                case 92:
+
+                    break;
+                case 93:
+
+                    break;
+                case 94:
+
+                    break;
+                case 95:
+
+                    break;
+                case 96:
+
+                    break;
+                case 97:
+
+                    break;
+                case 98:
+
+                    break;
+                case 99:
+
+                    break;
+                case 100:
+
                     break;
                 default:
-                    Player1.Location = new Point(663, 33);
+                    playerIcon.Location = new Point(663, 33);
                     break;
 
             }
         }
-        public static void Player2Location(int Player2location, PictureBox Player2)
-        {
-            switch (Player2location)
-            {
-                case 0:
-                    Player2.Location = new Point(36, 510 + 46);
-                    break;
-                case 1:
-                    Player2.Location = new Point(129, 510 + 46);
-                    break;
-                case 2:
-                    Player2.Location = new Point(216, 510 + 46);
-                    break;
-                case 3:
-                    Player2.Location = new Point(306, 510 + 46);
-                    break;
-                case 4:
-                    Player2.Location = new Point(394, 510 + 46);
-                    break;
-                case 5:
-                    Player2.Location = new Point(483, 510 + 46);
-                    break;
-                case 6:
-                    Player2.Location = new Point(572, 510 + 46);
-                    break;
-                case 7:
-                    Player2.Location = new Point(663, 510 + 46);
-                    break;
-                case 8:
-                    Player2.Location = new Point(663, 432 + 46);
-                    break;
-                case 9:
-                    Player2.Location = new Point(572, 432 + 46);
-                    break;
-                case 10:
-                    Player2.Location = new Point(483, 432 + 46);
-                    break;
-                case 11:
-                    Player2.Location = new Point(394, 432 + 46);
-                    break;
-                case 12:
-                    Player2.Location = new Point(306, 432 + 46);
-                    break;
-                case 13:
-                    Player2.Location = new Point(216, 432 + 46);
-                    break;
-                case 14:
-                    Player2.Location = new Point(129, 432 + 46);
-                    break;
-                case 15:
-                    Player2.Location = new Point(36, 432 + 46);
-                    break;
-                case 16:
-                    Player2.Location = new Point(36, 353 + 46);
-                    break;
-                case 17:
-                    Player2.Location = new Point(129, 353 + 46);
-                    break;
-                case 18:
-                    Player2.Location = new Point(216, 353 + 46);
-                    break;
-                case 19:
-                    Player2.Location = new Point(306, 353 + 46);
-                    break;
-                case 20:
-                    Player2.Location = new Point(394, 353 + 46);
-                    break;
-                case 21:
-                    Player2.Location = new Point(483, 353 + 46);
-                    break;
-                case 22:
-                    Player2.Location = new Point(572, 353 + 46);
-                    break;
-                case 23:
-                    Player2.Location = new Point(663, 353 + 46);
-                    break;
-                case 24:
-                    Player2.Location = new Point(663, 272 + 46);
-                    break;
-                case 25:
-                    Player2.Location = new Point(572, 272 + 46);
-                    break;
-                case 26:
-                    Player2.Location = new Point(483, 272 + 46);
-                    break;
-                case 27:
-                    Player2.Location = new Point(394, 272 + 46);
-                    break;
-                case 28:
-                    Player2.Location = new Point(306, 272 + 46);
-                    break;
-                case 29:
-                    Player2.Location = new Point(216, 272 + 46);
-                    break;
-                case 30:
-                    Player2.Location = new Point(129, 272 + 46);
-                    break;
-                case 31:
-                    Player2.Location = new Point(36, 272 + 46);
-                    break;
-                case 32:
-                    Player2.Location = new Point(36, 193 + 46);
-                    break;
-                case 33:
-                    Player2.Location = new Point(129, 193 + 46);
-                    break;
-                case 34:
-                    Player2.Location = new Point(216, 193 + 46);
-                    break;
-                case 35:
-                    Player2.Location = new Point(306, 193 + 46);
-                    break;
-                case 36:
-                    Player2.Location = new Point(394, 193 + 46);
-                    break;
-                case 37:
-                    Player2.Location = new Point(483, 193 + 46);
-                    break;
-                case 38:
-                    Player2.Location = new Point(572, 193 + 46);
-                    break;
-                case 39:
-                    Player2.Location = new Point(663, 193 + 46);
-                    break;
-                case 40:
-                    Player2.Location = new Point(663, 113 + 46);
-                    break;
-                case 41:
-                    Player2.Location = new Point(572, 113 + 46);
-                    break;
-                case 42:
-                    Player2.Location = new Point(483, 113 + 46);
-                    break;
-                case 43:
-                    Player2.Location = new Point(394, 113 + 46);
-                    break;
-                case 44:
-                    Player2.Location = new Point(306, 113 + 46);
-                    break;
-                case 45:
-                    Player2.Location = new Point(216, 113 + 46);
-                    break;
-                case 46:
-                    Player2.Location = new Point(129, 113 + 46);
-                    break;
-                case 47:
-                    Player2.Location = new Point(36, 113 + 46);
-                    break;
-                case 48:
-                    Player2.Location = new Point(36, 33 + 46);
-                    break;
-                case 49:
-                    Player2.Location = new Point(129, 33 + 46);
-                    break;
-                case 50:
-                    Player2.Location = new Point(216, 33 + 46);
-                    break;
-                case 51:
-                    Player2.Location = new Point(306, 33 + 46);
-                    break;
-                case 52:
-                    Player2.Location = new Point(394, 33 + 46);
-                    break;
-                case 53:
-                    Player2.Location = new Point(483, 33 + 46);
-                    break;
-                case 54:
-                    Player2.Location = new Point(572, 33 + 46);
-                    break;
-                case 55:
-                    Player2.Location = new Point(663, 33 + 46);
-                    break;
-                default:
-                    Player2.Location = new Point(663, 33 + 46);
-                    break;
-
-            }
-        }
+   
     }
 }
 

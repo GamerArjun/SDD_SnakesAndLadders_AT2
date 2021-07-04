@@ -45,7 +45,7 @@ namespace AT2
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
             this.button1.Location = new System.Drawing.Point(684, 531);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 78);
             this.button1.TabIndex = 1;
@@ -69,8 +69,8 @@ namespace AT2
             // Player1
             // 
             this.Player1.BackColor = System.Drawing.Color.Aqua;
-            this.Player1.Location = new System.Drawing.Point(18, 615);
-            this.Player1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player1.Location = new System.Drawing.Point(18, 619);
+            this.Player1.Margin = new System.Windows.Forms.Padding(2);
             this.Player1.Name = "Player1";
             this.Player1.Size = new System.Drawing.Size(23, 20);
             this.Player1.TabIndex = 4;
@@ -82,7 +82,7 @@ namespace AT2
             this.pictureBox2.BackgroundImage = global::AT2.Properties.Resources.Board;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(-1, 1);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(670, 678);
             this.pictureBox2.TabIndex = 5;
@@ -92,7 +92,7 @@ namespace AT2
             // 
             this.Player2.BackColor = System.Drawing.Color.Red;
             this.Player2.Location = new System.Drawing.Point(18, 650);
-            this.Player2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Player2.Margin = new System.Windows.Forms.Padding(2);
             this.Player2.Name = "Player2";
             this.Player2.Size = new System.Drawing.Size(23, 20);
             this.Player2.TabIndex = 6;
@@ -108,7 +108,7 @@ namespace AT2
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Board";

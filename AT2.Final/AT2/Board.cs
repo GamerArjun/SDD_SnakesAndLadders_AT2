@@ -12,6 +12,7 @@ namespace AT2
 {
     public partial class Board : Form    
     {
+        int player1location = 1;
 
         public Board()
         {
@@ -25,12 +26,52 @@ namespace AT2
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            //roll the dice
             Random rn = new Random(); // New Random Class
             int random1 = rn.Next(1, 7); // Parameter for random number
             Console.WriteLine(random1); // Show on screen
             label1.Text = Convert.ToString(random1); //text;
+            //find location of player
+
+            //add the dice number to the player
+            player1location = random1 + player1location;
+            //find new location of the player
+            Console.WriteLine("location of player 1:" + player1location);
+            PlayerLocation.Player1Location(player1location, Player1);
+            player1location = checkLadderSnake(player1location, Player1);
         }
-            private void Form1_Load(object sender, EventArgs e)
+        //function to check for ladder and snake and move the player location
+        private int checkLadderSnake(int playerlocation, PictureBox player)
+        {
+            #region snake 
+            switch (playerlocation)
+            {
+                case 17:
+                    MessageBox.Show("You Got Bitten By Snake");
+                    playerlocation = 7;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
+            }
+            #endregion
+            #region laddar
+            switch (playerlocation)
+            {
+                case 4:
+                    MessageBox.Show("You have climbed a ladder");
+                    playerlocation = 14;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
+                case 9:
+                    MessageBox.Show("You have climbed a ladder");
+                    playerlocation = 31;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
+            }
+            #endregion
+            return playerlocation;
+        }
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
