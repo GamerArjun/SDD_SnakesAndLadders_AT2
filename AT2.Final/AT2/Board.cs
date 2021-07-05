@@ -52,6 +52,31 @@ namespace AT2
                     playerlocation = 7;
                     PlayerLocation.Player1Location(playerlocation, player);
                     break;
+                case 64:
+                    MessageBox.Show("You Got Bitten By Snake");
+                    playerlocation = 60;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
+                case 87:
+                    MessageBox.Show("You Got Bitten By Snake");
+                    playerlocation = 36;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
+                case 93:
+                    MessageBox.Show("You Got Bitten By Snake");
+                    playerlocation = 73;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
+                case 95:
+                    MessageBox.Show("You Got Bitten By Snake");
+                    playerlocation = 75;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
+                case 98:
+                    MessageBox.Show("You Got Bitten By Snake");
+                    playerlocation = 79;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
             }
             #endregion
             #region laddar
@@ -65,6 +90,31 @@ namespace AT2
                 case 9:
                     MessageBox.Show("You have climbed a ladder");
                     playerlocation = 31;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
+                case 21:
+                    MessageBox.Show("You have climbed a ladder");
+                    playerlocation = 42;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
+                case 28:
+                    MessageBox.Show("You have climbed a ladder");
+                    playerlocation = 84;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
+                case 51:
+                    MessageBox.Show("You have climbed a ladder");
+                    playerlocation = 67;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
+                case 72:
+                    MessageBox.Show("You have climbed a ladder");
+                    playerlocation = 91;
+                    PlayerLocation.Player1Location(playerlocation, player);
+                    break;
+                case 80:
+                    MessageBox.Show("You have climbed a ladder");
+                    playerlocation = 99;
                     PlayerLocation.Player1Location(playerlocation, player);
                     break;
             }

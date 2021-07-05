@@ -185,142 +185,142 @@ namespace AT2
                     playerIcon.Location = new Point(x1 + 5 * x_increment, y1 + 5 * y_increment);
                     break;
                 case 56:
-
+                    playerIcon.Location = new Point(x1 + 4 * x_increment, y1 + 5 * y_increment);
                     break;
                 case 57:
-
+                    playerIcon.Location = new Point(x1 + 3 * x_increment, y1 + 5 * y_increment);
                     break;
                 case 58:
-
+                    playerIcon.Location = new Point(x1 + 2 * x_increment, y1 + 5 * y_increment);
                     break;
                 case 59:
-
+                    playerIcon.Location = new Point(x1 + x_increment, y1 + 5 * y_increment);
                     break;
                 case 60:
-
+                    playerIcon.Location = new Point(x1, y1 + 5 * y_increment);
                     break;
                 case 61:
-
+                    playerIcon.Location = new Point(x1, y1 + 6 * y_increment);
                     break;
                 case 62:
-
+                    playerIcon.Location = new Point(x1 + x_increment, y1 + 6 * y_increment);
                     break;
                 case 63:
-
+                    playerIcon.Location = new Point(x1 + 2 * x_increment, y1 + 6 * y_increment);
                     break;
                 case 64:
-
+                    playerIcon.Location = new Point(x1 + 3 * x_increment, y1 + 6 * y_increment);
                     break;
                 case 65:
-
+                    playerIcon.Location = new Point(x1 + 4 * x_increment, y1 + 6 * y_increment);
                     break;
                 case 66:
-
+                    playerIcon.Location = new Point(x1 + 5 * x_increment, y1 + 6 * y_increment);
                     break;
                 case 67:
-
+                    playerIcon.Location = new Point(x1 + 6 * x_increment, y1 + 6 * y_increment);
                     break;
                 case 68:
-
+                    playerIcon.Location = new Point(x1 + 7 * x_increment, y1 + 6 * y_increment);
                     break;
                 case 69:
-
+                    playerIcon.Location = new Point(x1 + 8 * x_increment, y1 + 6 * y_increment);
                     break;
                 case 70:
-
+                    playerIcon.Location = new Point(x1 + 9 * x_increment, y1 + 6 * y_increment);
                     break;
                 case 71:
-
+                    playerIcon.Location = new Point(x1 + 9 * x_increment, y1 + 7 * y_increment);
                     break;
                 case 72:
-
+                    playerIcon.Location = new Point(x1 + 8 * x_increment, y1 + 7 * y_increment);
                     break;
                 case 73:
-
+                    playerIcon.Location = new Point(x1 + 7 * x_increment, y1 + 7 * y_increment);
                     break;
                 case 74:
-
+                    playerIcon.Location = new Point(x1 + 6 * x_increment, y1 + 7 * y_increment);
                     break;
                 case 75:
-
+                    playerIcon.Location = new Point(x1 + 5 * x_increment, y1 + 7 * y_increment);
                     break;
                 case 76:
-
+                    playerIcon.Location = new Point(x1 + 4 * x_increment, y1 + 7 * y_increment);
                     break;
                 case 77:
-
+                    playerIcon.Location = new Point(x1 + 3 * x_increment, y1 + 7 * y_increment);
                     break;
                 case 78:
-
+                    playerIcon.Location = new Point(x1 + 2 * x_increment, y1 + 7 * y_increment);
                     break;
                 case 79:
-
+                    playerIcon.Location = new Point(x1 + x_increment, y1 + 7 * y_increment);
                     break;
                 case 80:
-
+                    playerIcon.Location = new Point(x1, y1 + 7 * y_increment);
                     break;
                 case 81:
-
+                    playerIcon.Location = new Point(x1, y1 + 8 * y_increment);
                     break;
                 case 82:
-
+                    playerIcon.Location = new Point(x1 + x_increment, y1 + 8 * y_increment);
                     break;
                 case 83:
-
+                    playerIcon.Location = new Point(x1 + 2 * x_increment, y1 + 8 * y_increment);
                     break;
                 case 84:
-
+                    playerIcon.Location = new Point(x1 + 3 * x_increment, y1 + 8 * y_increment);
                     break;
                 case 85:
-
+                    playerIcon.Location = new Point(x1 + 4 * x_increment, y1 + 8 * y_increment);
                     break;
                 case 86:
-
+                    playerIcon.Location = new Point(x1 + 5 * x_increment, y1 + 8 * y_increment);
                     break;
                 case 87:
-
+                    playerIcon.Location = new Point(x1 + 6 * x_increment, y1 + 8 * y_increment);
                     break;
                 case 88:
-
+                    playerIcon.Location = new Point(x1 + 7 * x_increment, y1 + 8 * y_increment);
                     break;
                 case 89:
-
+                    playerIcon.Location = new Point(x1 + 8 * x_increment, y1 + 8 * y_increment);
                     break;
                 case 90:
-
+                    playerIcon.Location = new Point(x1 + 9 * x_increment, y1 + 8 * y_increment);
                     break;
                 case 91:
-
+                    playerIcon.Location = new Point(x1 + 9 * x_increment, y1 + 9 * y_increment);
                     break;
                 case 92:
-
+                    playerIcon.Location = new Point(x1 + 8 * x_increment, y1 + 9 * y_increment);
                     break;
                 case 93:
-
+                    playerIcon.Location = new Point(x1 + 7 * x_increment, y1 + 9 * y_increment);
                     break;
                 case 94:
-
+                    playerIcon.Location = new Point(x1 + 6 * x_increment, y1 + 9 * y_increment);
                     break;
                 case 95:
-
+                    playerIcon.Location = new Point(x1 + 5 * x_increment, y1 + 9 * y_increment);
                     break;
                 case 96:
-
+                    playerIcon.Location = new Point(x1 + 4 * x_increment, y1 + 9 * y_increment);
                     break;
                 case 97:
-
+                    playerIcon.Location = new Point(x1 + 3 * x_increment, y1 + 9 * y_increment);
                     break;
                 case 98:
-
+                    playerIcon.Location = new Point(x1 + 2 * x_increment, y1 + 9 * y_increment);
                     break;
                 case 99:
-
+                    playerIcon.Location = new Point(x1 + x_increment, y1 + 9 * y_increment);
                     break;
                 case 100:
-
+                    playerIcon.Location = new Point(x1, y1 + 9 * y_increment);
                     break;
                 default:
-                    playerIcon.Location = new Point(663, 33);
+                    playerIcon.Location = new Point(18, 619);
                     break;
 
             }
