@@ -24,13 +24,13 @@ namespace AT2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Board f1 = new Board();
+            Board f1 = new Board(3);
             f1.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Board f1 = new Board();
+            Board f1 = new Board(4);
             f1.ShowDialog();
         }
 
@@ -41,13 +41,13 @@ namespace AT2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Board f1 = new Board();
+            Board f1 = new Board(1);
             f1.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Board f1 = new Board();
+            Board f1 = new Board(2);
             f1.ShowDialog();
         }
 

@@ -10,12 +10,20 @@ namespace AT2
 {
     class PlayerLocation
     {
-        public static void Player1Location(int playerLocation, PictureBox playerIcon)
+        public static void PlayerAtLocation(int playerLocation, PictureBox playerIcon)
         {
             int y1 = 619;
             int x1 = 18;
             int x_increment = 70;
             int y_increment = -67;
+            if (playerIcon.Name == "Player1")
+            {
+                y1 = 619;
+            }
+            else
+            {
+                y1 = 650;
+            }
             switch (playerLocation)
             {
                 case 1:
@@ -320,7 +328,7 @@ namespace AT2
                     playerIcon.Location = new Point(x1, y1 + 9 * y_increment);
                     break;
                 default:
-                    playerIcon.Location = new Point(18, 619);
+                    playerIcon.Location = new Point(18, 6191);
                     break;
 
             }

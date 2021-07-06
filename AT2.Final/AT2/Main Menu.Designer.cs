@@ -32,8 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.OnePlayer = new System.Windows.Forms.Button();
             this.TwoPlayer = new System.Windows.Forms.Button();
-            this.ThreePlayer = new System.Windows.Forms.Button();
-            this.FourPlayer = new System.Windows.Forms.Button();
             this.Connect = new System.Windows.Forms.Button();
             this.Settings = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -74,30 +72,6 @@
             this.TwoPlayer.UseVisualStyleBackColor = false;
             this.TwoPlayer.Click += new System.EventHandler(this.button2_Click);
             // 
-            // ThreePlayer
-            // 
-            this.ThreePlayer.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ThreePlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.ThreePlayer.Location = new System.Drawing.Point(898, 304);
-            this.ThreePlayer.Name = "ThreePlayer";
-            this.ThreePlayer.Size = new System.Drawing.Size(184, 123);
-            this.ThreePlayer.TabIndex = 3;
-            this.ThreePlayer.Text = "Three Player";
-            this.ThreePlayer.UseVisualStyleBackColor = false;
-            this.ThreePlayer.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // FourPlayer
-            // 
-            this.FourPlayer.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.FourPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.FourPlayer.Location = new System.Drawing.Point(898, 433);
-            this.FourPlayer.Name = "FourPlayer";
-            this.FourPlayer.Size = new System.Drawing.Size(184, 123);
-            this.FourPlayer.TabIndex = 4;
-            this.FourPlayer.Text = "Four Player";
-            this.FourPlayer.UseVisualStyleBackColor = false;
-            this.FourPlayer.Click += new System.EventHandler(this.button4_Click);
-            // 
             // Connect
             // 
             this.Connect.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -131,8 +105,6 @@
             this.ClientSize = new System.Drawing.Size(1094, 568);
             this.Controls.Add(this.Settings);
             this.Controls.Add(this.Connect);
-            this.Controls.Add(this.FourPlayer);
-            this.Controls.Add(this.ThreePlayer);
             this.Controls.Add(this.TwoPlayer);
             this.Controls.Add(this.OnePlayer);
             this.Controls.Add(this.label1);
@@ -151,8 +123,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button OnePlayer;
         private System.Windows.Forms.Button TwoPlayer;
-        private System.Windows.Forms.Button ThreePlayer;
-        private System.Windows.Forms.Button FourPlayer;
         private System.Windows.Forms.Button Connect;
         private System.Windows.Forms.Button Settings;
     }

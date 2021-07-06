@@ -70,6 +70,7 @@ namespace AT2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            label1.Text = "";
             try
             {
                 // statements causing exception
@@ -79,11 +80,11 @@ namespace AT2
                 cmd.CommandText = "Insert into selected_user(ID)Values("+userselected+")";
                 cmd.Connection = con;
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Friend Added", "Congrats");
+                label1.Text = Convert.ToString("Friend Added");
             }
             catch (Exception e1)
             {
-                MessageBox.Show("Friend Already Added", "Error");
+                label1.Text = Convert.ToString("Friend Already Added");
                 // error handling code
             }
             finally
