@@ -11,8 +11,9 @@ using System.Threading;
 
 namespace AT2
 {
-    public partial class Board : Form    
+    public partial class Board : Form
     {
+        private const bool V = true;
         int player1location = 1;
         int player2location = 1;
         int numberOfPlayers = 0;
@@ -39,47 +40,11 @@ namespace AT2
         {
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            #region Dice
-            //roll the dice
-            Random rn = new Random(); // New Random Class
-            int random1 = rn.Next(1, 7); // Parameter for random number
-            Console.WriteLine(random1); // Show on screen
-            label1.Text = Convert.ToString(random1); //text;
-                                                     //find location of player
-            #endregion Dice
-            #region Location
-
-            //find whos turn it is and then change the players location
-            if (whosTurn == 1)
-            {
-                //add the dice number to the player
-                player1location = random1 + player1location;
-                //find new location of the player
-                Console.WriteLine("location of player 1:" + player1location);
-                PlayerLocation.PlayerAtLocation(player1location, Player1);
-                player1location = checkLadderSnake(player1location, Player1);
-            }
-            else
-            {
-                //add the dice number to the player
-                player2location = random1 + player2location;
-                //find new location of the player
-                Console.WriteLine("location of player 2:" + player2location);
-                PlayerLocation.PlayerAtLocation(player2location, Player2);
-                player2location = checkLadderSnake(player2location, Player2);
-            }
-            #endregion Location
-            ///change to next player turn
-            whosTurn = whosTurn + 1;
-            if (whosTurn >numberOfPlayers)
-            {
-                whosTurn = 1;
-            }
-            playerTurn.Text = Convert.ToString(whosTurn);
+            RollDice();
         }
+
         //function to check for ladder and snake and move the player location
         private int checkLadderSnake(int playerlocation, PictureBox player)
         {
@@ -165,8 +130,74 @@ namespace AT2
             }
 
             #endregion
+            #region Win
+            if (playerlocation >= 100)
+            {
+                label2.Text = player.Name + " Has Won";
+                button1.Enabled = false;
+                closeGame.Enabled = true;
+
+            }
+            #endregion Win
+
             return playerlocation;
         }
+        private void RollDice()
+        {
+            #region Dice
+            //roll the dice
+            Random rn = new Random(); // New Random Class
+            int random1 = rn.Next(1, 7); // Parameter for random number
+            Console.WriteLine(random1); // Show on screen
+            label1.Text = Convert.ToString(random1); //text;
+                                                     //find location of player
+            #endregion Dice
+            #region Location
+
+            //find whos turn it is and then change the players location
+            if (whosTurn == 1)
+            {
+                //add the dice number to the player
+                player1location = random1 + player1location;
+                //find new location of the player
+                Console.WriteLine("location of player 1:" + player1location);
+                PlayerLocation.PlayerAtLocation(player1location, Player1);
+                player1location = checkLadderSnake(player1location, Player1);
+            }
+            else
+            {
+                //add the dice number to the player
+                player2location = random1 + player2location;
+                //find new location of the player
+                Console.WriteLine("location of player 2:" + player2location);
+                PlayerLocation.PlayerAtLocation(player2location, Player2);
+                player2location = checkLadderSnake(player2location, Player2);
+            }
+            #endregion Location
+            #region Turn
+            ///change to next player turn
+            whosTurn = whosTurn + 1;
+            if (whosTurn > numberOfPlayers)
+            {
+                whosTurn = 1;
+            }
+            playerTurn.Text = Convert.ToString(whosTurn);
+            #endregion Turn
+        }
+        private void Hide(Button button1)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Board_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+               RollDice();
+            }
+        }
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -192,6 +223,11 @@ namespace AT2
         private void Player2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void closeGame_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

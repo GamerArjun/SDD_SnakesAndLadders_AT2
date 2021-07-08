@@ -39,6 +39,7 @@ namespace AT2
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.playerTurn = new System.Windows.Forms.Label();
+            this.closeGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Player1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player2)).BeginInit();
@@ -46,9 +47,9 @@ namespace AT2
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
-            this.button1.Location = new System.Drawing.Point(912, 654);
+            this.button1.Location = new System.Drawing.Point(900, 653);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(216, 96);
@@ -60,8 +61,8 @@ namespace AT2
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(912, 580);
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(898, 580);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(216, 71);
             this.label1.TabIndex = 2;
@@ -105,6 +106,7 @@ namespace AT2
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(912, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(204, 355);
@@ -124,6 +126,7 @@ namespace AT2
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.label4.ForeColor = System.Drawing.Color.Lime;
             this.label4.Location = new System.Drawing.Point(905, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(209, 52);
@@ -134,6 +137,7 @@ namespace AT2
             // playerTurn
             // 
             this.playerTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.playerTurn.ForeColor = System.Drawing.Color.Lime;
             this.playerTurn.Location = new System.Drawing.Point(905, 70);
             this.playerTurn.Name = "playerTurn";
             this.playerTurn.Size = new System.Drawing.Size(211, 53);
@@ -141,11 +145,29 @@ namespace AT2
             this.playerTurn.Text = "-";
             this.playerTurn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // closeGame
+            // 
+            this.closeGame.BackColor = System.Drawing.Color.Magenta;
+            this.closeGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.closeGame.Enabled = false;
+            this.closeGame.FlatAppearance.BorderSize = 0;
+            this.closeGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.closeGame.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.closeGame.Location = new System.Drawing.Point(920, 780);
+            this.closeGame.Name = "closeGame";
+            this.closeGame.Size = new System.Drawing.Size(184, 45);
+            this.closeGame.TabIndex = 11;
+            this.closeGame.Text = "Close Game";
+            this.closeGame.UseVisualStyleBackColor = false;
+            this.closeGame.Click += new System.EventHandler(this.closeGame_Click);
+            // 
             // Board
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(1128, 837);
+            this.Controls.Add(this.closeGame);
             this.Controls.Add(this.playerTurn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -180,6 +202,7 @@ namespace AT2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label playerTurn;
+        private System.Windows.Forms.Button closeGame;
     }
 }
 

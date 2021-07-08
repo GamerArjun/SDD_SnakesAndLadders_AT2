@@ -39,11 +39,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.label1.Location = new System.Drawing.Point(107, 9);
+            this.label1.Location = new System.Drawing.Point(252, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(584, 71);
+            this.label1.Size = new System.Drawing.Size(582, 69);
             this.label1.TabIndex = 0;
             this.label1.Text = "Snakes And Ladders";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -64,7 +64,7 @@
             // 
             this.TwoPlayer.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.TwoPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.TwoPlayer.Location = new System.Drawing.Point(898, 141);
+            this.TwoPlayer.Location = new System.Drawing.Point(898, 433);
             this.TwoPlayer.Name = "TwoPlayer";
             this.TwoPlayer.Size = new System.Drawing.Size(184, 123);
             this.TwoPlayer.TabIndex = 2;
@@ -102,12 +102,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::AT2.Properties.Resources.Main_Menu_Pic;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1094, 568);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Settings);
             this.Controls.Add(this.Connect);
             this.Controls.Add(this.TwoPlayer);
             this.Controls.Add(this.OnePlayer);
-            this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form2";
