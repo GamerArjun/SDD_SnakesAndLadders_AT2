@@ -63,6 +63,9 @@ namespace AT2
             F7.ShowDialog();
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
