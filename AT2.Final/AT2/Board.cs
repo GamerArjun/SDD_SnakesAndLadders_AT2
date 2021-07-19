@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Data.OleDb;
 
 namespace AT2
 {
@@ -15,11 +16,29 @@ namespace AT2
     {
         private const bool V = true;
         int player1location = 1;
-        int player2location = 1;
+        int player2location = -1;
         int numberOfPlayers = 0;
         int whosTurn = 1;
 
         public Board(int numberOfPlayers)
+        {
+            initializePlayers(numberOfPlayers);
+        }
+        public Board(int numberOfPlayers, int player1location, int player2location, int whosTurn)
+        {
+            initializePlayers(numberOfPlayers);
+            this.player1location = player1location;
+            PlayerLocation.PlayerAtLocation(player1location, Player1);
+            this.player2location = player2location;
+            if (numberOfPlayers > 1)
+            {
+                PlayerLocation.PlayerAtLocation(player2location, Player2);
+            }
+            this.whosTurn = whosTurn;
+            playerTurn.Text = Convert.ToString(whosTurn);
+        }
+
+        private void initializePlayers(int numberOfPlayers)
         {
             this.numberOfPlayers = numberOfPlayers;
             InitializeComponent();
@@ -35,7 +54,6 @@ namespace AT2
             }
             playerTurn.Text = Convert.ToString(whosTurn);
         }
-
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -135,10 +153,10 @@ namespace AT2
             {
                 label2.Text = player.Name + " Has Won";
                 button1.Enabled = false;
-                closeGame.Enabled = true;
 
             }
             #endregion Win
+
 
             return playerlocation;
         }
@@ -147,9 +165,9 @@ namespace AT2
             #region Dice
             //roll the dice
             Random rn = new Random(); // New Random Class
-            int random1 = rn.Next(1, 7); // Parameter for random number
-            Console.WriteLine(random1); // Show on screen
-            label1.Text = Convert.ToString(random1); //text;
+            int diceClick = rn.Next(1, 7); // Parameter for random number
+            Console.WriteLine(diceClick); // Show on screen
+            label1.Text = Convert.ToString(diceClick); //text;
                                                      //find location of player
             #endregion Dice
             #region Location
@@ -157,20 +175,21 @@ namespace AT2
             //find whos turn it is and then change the players location
             if (whosTurn == 1)
             {
+                movePlayer(player1location, diceClick, Player1);
                 //add the dice number to the player
-                player1location = random1 + player1location;
+                player1location = diceClick + player1location;
                 //find new location of the player
                 Console.WriteLine("location of player 1:" + player1location);
-                PlayerLocation.PlayerAtLocation(player1location, Player1);
                 player1location = checkLadderSnake(player1location, Player1);
             }
             else
             {
+                movePlayer(player2location, diceClick, Player2);
                 //add the dice number to the player
-                player2location = random1 + player2location;
+                player2location = diceClick + player2location;
                 //find new location of the player
                 Console.WriteLine("location of player 2:" + player2location);
-                PlayerLocation.PlayerAtLocation(player2location, Player2);
+                
                 player2location = checkLadderSnake(player2location, Player2);
             }
             #endregion Location
@@ -183,6 +202,17 @@ namespace AT2
             }
             playerTurn.Text = Convert.ToString(whosTurn);
             #endregion Turn
+        }
+
+        private void movePlayer(int playerLocation, int diceClick, PictureBox playerIcon)
+        {
+            for (int i=0; i< diceClick; i++)
+            {
+                playerLocation = playerLocation + 1;
+                PlayerLocation.PlayerAtLocation(playerLocation, playerIcon);
+                int milliseconds = 100;
+                Thread.Sleep(milliseconds);
+            }
         }
         private void Hide(Button button1)
         {
@@ -238,6 +268,42 @@ namespace AT2
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void saveGame(int player1location, int player2location, int whosTurn)
+        {
+            OleDbConnection con = new OleDbConnection(Constants.connectionString);
+                //clear and insert new game
+                try
+                {
+                    // statements causing exception
+                    OleDbCommand cmd = con.CreateCommand();
+                    con.Open();
+                    cmd.Connection = con;
+                    cmd.CommandText = "DELETE from game_save where 1=1";
+                    cmd.ExecuteNonQuery();
+                    cmd.CommandText = "Insert into game_save(Player_1_Location, Player_2_Location, Player_Turn)Values("+player1location+","+player2location+","+whosTurn+")";
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception e1)
+                {
+                Console.WriteLine("error while saving the game");
+                    // error handling code
+                }
+                finally
+                {
+                    con.Close();
+                }
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            saveGame(player1location, player2location, whosTurn);
+            label2.Text = "Game Saved";
         }
     }
 }

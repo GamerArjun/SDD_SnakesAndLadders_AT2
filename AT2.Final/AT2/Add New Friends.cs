@@ -14,7 +14,7 @@ namespace AT2
 {
     public partial class Form6 : Form
     {
-        OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = 'C:\\Users\\parth.bhatia\\OneDrive - Arden Anglican School\\VisualStudioProjects\\AT2.Final\\AT2Database.accdb'");
+        OleDbConnection con = new OleDbConnection(Constants.connectionString);
 
         public Form6()
         {
@@ -31,7 +31,7 @@ namespace AT2
             dataGridView1.Rows.Clear();
             //read value from the text box
             string searchstring = textBox1.Text;
-            using (OleDbConnection cnn = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = 'C:\\Users\\parth.bhatia\\OneDrive - Arden Anglican School\\VisualStudioProjects\\AT2.Final\\AT2Database.accdb'"))
+            using (OleDbConnection cnn = new OleDbConnection(Constants.connectionString))
             {
                 string query;
                 //check if the search string is empty or not
@@ -94,6 +94,14 @@ namespace AT2
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

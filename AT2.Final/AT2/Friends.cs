@@ -49,7 +49,7 @@ namespace AT2
 
         private void Friends_Load(object sender, EventArgs e)
         {
-            using (OleDbConnection cnn = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = 'C:\\Users\\parth.bhatia\\OneDrive - Arden Anglican School\\VisualStudioProjects\\AT2.Final\\AT2Database.accdb'"))
+            using (OleDbConnection cnn = new OleDbConnection(Constants.connectionString))
             {
                 string query = "SELECT selected_user.id, user_master.username from user_master, selected_user where user_master.id = selected_user.id";
                 using (OleDbCommand cmd = new OleDbCommand(query, cnn))
@@ -73,6 +73,12 @@ namespace AT2
                     }
                 }
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu f4 = new MainMenu();
         }
     }
 }

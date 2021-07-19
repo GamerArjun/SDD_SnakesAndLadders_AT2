@@ -52,6 +52,7 @@
     <Compile Include="Board.Designer.cs">
       <DependentUpon>Board.cs</DependentUpon>
     </Compile>
+    <Compile Include="Constants.cs" />
     <Compile Include="Colours Change.cs">
       <SubType>Form</SubType>
     </Compile>

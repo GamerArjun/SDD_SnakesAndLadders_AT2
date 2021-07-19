@@ -35,6 +35,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Settings = new System.Windows.Forms.Button();
             this.OnePlayer = new System.Windows.Forms.Button();
+            this.loadButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +118,18 @@
             this.OnePlayer.UseVisualStyleBackColor = false;
             this.OnePlayer.Click += new System.EventHandler(this.button1_Click);
             // 
+            // loadButton
+            // 
+            this.loadButton.BackColor = System.Drawing.Color.Transparent;
+            this.loadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.loadButton.Location = new System.Drawing.Point(12, 466);
+            this.loadButton.Name = "loadButton";
+            this.loadButton.Size = new System.Drawing.Size(83, 47);
+            this.loadButton.TabIndex = 11;
+            this.loadButton.Text = "Load";
+            this.loadButton.UseVisualStyleBackColor = false;
+            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -126,6 +139,7 @@
             this.BackgroundImage = global::AT2.Properties.Resources.Main_Menu_Pic;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(484, 632);
+            this.Controls.Add(this.loadButton);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Settings);
@@ -151,5 +165,6 @@
         private System.Windows.Forms.Button Connect;
         private System.Windows.Forms.Button Settings;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button loadButton;
     }
 }

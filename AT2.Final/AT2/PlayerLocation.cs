@@ -85,7 +85,6 @@ namespace AT2
                     break;
                 case 20:
                     playerIcon.Location = new Point(x1 + x_increment, y1 + y_increment);
-
                     break;
                 case 21:
                     playerIcon.Location = new Point(x1, y1 +2 * y_increment);
