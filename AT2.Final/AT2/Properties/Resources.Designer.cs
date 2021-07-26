@@ -63,6 +63,16 @@ namespace AT2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Blank {
+            get {
+                object obj = ResourceManager.GetObject("Blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Board {
             get {
                 object obj = ResourceManager.GetObject("Board", resourceCulture);
@@ -136,6 +146,26 @@ namespace AT2.Properties {
         internal static System.Drawing.Bitmap Player {
             get {
                 object obj = ResourceManager.GetObject("Player", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Player1 {
+            get {
+                object obj = ResourceManager.GetObject("Player1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Player2 {
+            get {
+                object obj = ResourceManager.GetObject("Player2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

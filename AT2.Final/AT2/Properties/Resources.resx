@@ -121,6 +121,9 @@
   <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Player1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Player1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ONline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ONline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,10 +139,16 @@
   <data name="One" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\One.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Main Menu Pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Main Menu Pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Board" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Board.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Main Menu Pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Main Menu Pic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Player2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Player2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

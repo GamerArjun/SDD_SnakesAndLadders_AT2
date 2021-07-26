@@ -1,6 +1,6 @@
 ﻿namespace AT2
 {
-    partial class Colours_Change
+    partial class Name_Change
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Colours_Change
+            // Name_Change
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Colours_Change";
-            this.Text = "Colours Change";
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Name_Change";
+            this.Text = "Name Change";
             this.ResumeLayout(false);
 
         }

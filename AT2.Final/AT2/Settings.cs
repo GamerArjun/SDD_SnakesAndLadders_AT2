@@ -15,12 +15,13 @@ namespace AT2
         public Form7()
         {
             InitializeComponent();
+            this.txtPlayer1.Text = Constants.player1Name;
+            this.txtPlayer2.Text = Constants.player2Name;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Colours_Change F8 = new Colours_Change();
-            F8.ShowDialog();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,7 +32,34 @@ namespace AT2
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Constants.player1Name = this.txtPlayer1.Text;
+            Constants.player2Name = this.txtPlayer2.Text;
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPlayer1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

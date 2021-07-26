@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AT2
 {
-    public partial class Colours_Change : Form
+    public partial class Name_Change : Form
     {
-        public Colours_Change()
+        public Name_Change()
         {
             InitializeComponent();
         }

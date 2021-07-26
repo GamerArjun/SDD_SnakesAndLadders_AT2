@@ -45,7 +45,6 @@ C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2\
 C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2\AT2\obj\Debug\AT2.csprojAssemblyReference.cache
 C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\obj\Debug\AT2.csprojAssemblyReference.cache
 C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\obj\Debug\AT2.Board.resources
-C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\obj\Debug\AT2.Colours_Change.resources
 C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\obj\Debug\AT2.Form2.resources
 C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\obj\Debug\AT2.Friends.resources
 C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\obj\Debug\AT2.Form4.resources
@@ -60,3 +59,8 @@ C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.
 C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\bin\Debug\AT2.exe.config
 C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\bin\Debug\AT2.exe
 C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\bin\Debug\AT2.pdb
+C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\bin\Debug\AT2.exe.manifest
+C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\bin\Debug\AT2.application
+C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\obj\Debug\AT2.Name_Change.resources
+C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\obj\Debug\AT2.exe.manifest
+C:\Users\parth.bhatia\OneDrive - Arden Anglican School\VisualStudioProjects\AT2.Final\AT2\obj\Debug\AT2.application

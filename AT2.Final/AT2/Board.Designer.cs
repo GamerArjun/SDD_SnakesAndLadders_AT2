@@ -35,12 +35,12 @@ namespace AT2
             this.playerTurn = new System.Windows.Forms.Label();
             this.closeGame = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.Player2 = new System.Windows.Forms.PictureBox();
             this.Player1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.saveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Player2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,6 +59,7 @@ namespace AT2
             this.label2.TabIndex = 7;
             this.label2.Text = "-";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
@@ -97,7 +98,7 @@ namespace AT2
             this.closeGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.closeGame.ForeColor = System.Drawing.Color.White;
             this.closeGame.Location = new System.Drawing.Point(758, 640);
-            this.closeGame.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closeGame.Margin = new System.Windows.Forms.Padding(2);
             this.closeGame.Name = "closeGame";
             this.closeGame.Size = new System.Drawing.Size(86, 37);
             this.closeGame.TabIndex = 11;
@@ -119,69 +120,6 @@ namespace AT2
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button1.BackgroundImage = global::AT2.Properties.Resources.dfghjk;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
-            this.button1.Location = new System.Drawing.Point(714, 531);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 88);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Player2
-            // 
-            this.Player2.BackColor = System.Drawing.Color.Fuchsia;
-            this.Player2.BackgroundImage = global::AT2.Properties.Resources.Player;
-            this.Player2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Player2.Location = new System.Drawing.Point(18, 640);
-            this.Player2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Player2.Name = "Player2";
-            this.Player2.Size = new System.Drawing.Size(35, 30);
-            this.Player2.TabIndex = 6;
-            this.Player2.TabStop = false;
-            this.Player2.Click += new System.EventHandler(this.Player2_Click);
-            // 
-            // Player1
-            // 
-            this.Player1.BackColor = System.Drawing.Color.Aqua;
-            this.Player1.BackgroundImage = global::AT2.Properties.Resources.Player;
-            this.Player1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Player1.Location = new System.Drawing.Point(18, 612);
-            this.Player1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Player1.Name = "Player1";
-            this.Player1.Size = new System.Drawing.Size(35, 27);
-            this.Player1.TabIndex = 4;
-            this.Player1.TabStop = false;
-            this.Player1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::AT2.Properties.Resources.Board;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 1);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(670, 678);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.pictureBox1.Location = new System.Drawing.Point(676, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 674);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
             // saveButton
             // 
             this.saveButton.BackColor = System.Drawing.Color.DarkSlateBlue;
@@ -198,6 +136,69 @@ namespace AT2
             this.saveButton.Text = "SAVE";
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // Player2
+            // 
+            this.Player2.BackColor = System.Drawing.Color.White;
+            this.Player2.BackgroundImage = global::AT2.Properties.Resources.Player2;
+            this.Player2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Player2.Location = new System.Drawing.Point(18, 640);
+            this.Player2.Margin = new System.Windows.Forms.Padding(2);
+            this.Player2.Name = "Player2";
+            this.Player2.Size = new System.Drawing.Size(35, 30);
+            this.Player2.TabIndex = 6;
+            this.Player2.TabStop = false;
+            this.Player2.Click += new System.EventHandler(this.Player2_Click);
+            // 
+            // Player1
+            // 
+            this.Player1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Player1.BackgroundImage = global::AT2.Properties.Resources.Player1;
+            this.Player1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Player1.Location = new System.Drawing.Point(18, 612);
+            this.Player1.Margin = new System.Windows.Forms.Padding(2);
+            this.Player1.Name = "Player1";
+            this.Player1.Size = new System.Drawing.Size(35, 27);
+            this.Player1.TabIndex = 4;
+            this.Player1.TabStop = false;
+            this.Player1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button1.BackgroundImage = global::AT2.Properties.Resources.dfghjk;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
+            this.button1.Location = new System.Drawing.Point(714, 531);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 88);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::AT2.Properties.Resources.Board;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 1);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(670, 678);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.pictureBox1.Location = new System.Drawing.Point(676, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 674);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // Board
             // 
@@ -217,7 +218,7 @@ namespace AT2
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Board";

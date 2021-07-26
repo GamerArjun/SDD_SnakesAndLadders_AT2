@@ -24,6 +24,7 @@ namespace AT2
         {
             initializePlayers(numberOfPlayers);
         }
+        #region Single or Double Game
         public Board(int numberOfPlayers, int player1location, int player2location, int whosTurn)
         {
             initializePlayers(numberOfPlayers);
@@ -35,7 +36,7 @@ namespace AT2
                 PlayerLocation.PlayerAtLocation(player2location, Player2);
             }
             this.whosTurn = whosTurn;
-            playerTurn.Text = Convert.ToString(whosTurn);
+            showPlayerName(whosTurn);
         }
 
         private void initializePlayers(int numberOfPlayers)
@@ -52,8 +53,9 @@ namespace AT2
             {
                 Player2.Hide();
             }
-            playerTurn.Text = Convert.ToString(whosTurn);
+            showPlayerName(whosTurn);
         }
+        #endregion Single or Double Game
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -160,6 +162,19 @@ namespace AT2
 
             return playerlocation;
         }
+
+        private void showPlayerName(int whosTurn)
+        {
+            if (whosTurn == 1)
+            {
+                playerTurn.Text = Constants.player1Name;
+            }
+            else
+            {
+                playerTurn.Text = Constants.player2Name;
+            }
+
+        }
         private void RollDice()
         {
             #region Dice
@@ -200,12 +215,13 @@ namespace AT2
             {
                 whosTurn = 1;
             }
-            playerTurn.Text = Convert.ToString(whosTurn);
+            showPlayerName(whosTurn);
             #endregion Turn
         }
 
         private void movePlayer(int playerLocation, int diceClick, PictureBox playerIcon)
         {
+            #region Animation Of Player
             for (int i=0; i< diceClick; i++)
             {
                 playerLocation = playerLocation + 1;
@@ -213,6 +229,7 @@ namespace AT2
                 int milliseconds = 100;
                 Thread.Sleep(milliseconds);
             }
+            #endregion Animation Of Player
         }
         private void Hide(Button button1)
         {
@@ -227,7 +244,7 @@ namespace AT2
             }
         }
 
-
+        #region Form Buttons and UI
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -272,9 +289,10 @@ namespace AT2
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            #endregion Form buttons and UI
         }
         private void saveGame(int player1location, int player2location, int whosTurn)
+        #region Save Game
         {
             OleDbConnection con = new OleDbConnection(Constants.connectionString);
                 //clear and insert new game
@@ -299,11 +317,16 @@ namespace AT2
                     con.Close();
                 }
         }
-
+        #endregion Save Game
         private void saveButton_Click(object sender, EventArgs e)
         {
             saveGame(player1location, player2location, whosTurn);
             label2.Text = "Game Saved";
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
